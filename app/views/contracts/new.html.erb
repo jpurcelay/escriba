@@ -1,0 +1,19 @@
+<h1>Contracts#new</h1>
+<p>Find me in app/views/contracts/new.html.erb</p>
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(:contract, url: contrato_path) do |f| %>
+        <%= f.label :name , "Nombre" %>
+        <%= f.text_field :name, class: 'form-control' %>
+        <%= f.label :email %>
+        <%= f.email_field :email, class: 'form-control' %>
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'form-control' %>
+        <%= f.radio_button(:age, "child") %>
+        <%= f.label(:age_child, "I am younger than 21", class: 'radio-inline' ) %>
+        <%= f.radio_button(:age, "adult") %>
+        <%= f.label(:age_adult, "I'm over 21", class: 'radio-inline' ) %>
+        <%= f.submit "Log in", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
