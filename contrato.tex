@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+
+% Emulate MS Word
+\usepackage{wordlike}
+
+% One inch margins
+\PassOptionsToPackage{margin=1in}{geometry}
+
+% Remove footnote indentation
+\usepackage[hang,flushmargin]{footmisc} 
+
+% Add extra blank line between paragraphs, and remove paragraph indentation
+\usepackage[parfill]{parskip}
+\parskip = 2\baselineskip
+
+% Double spacing
+\usepackage{setspace}
+\setstretch{2}
+
+% Header
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{57pt}
+\lhead{Header line 1\\Line 2\\Line 3\\Line 4}
+
+% Add space between text and footnotes section
+\setlength{\skip\footins}{0.5in}
+
+% Add a space before the footnote mark
+\let\myfootnote\footnote
+\renewcommand{\footnote}[1]{\myfootnote{~#1}}
+
+% Don't justify along the right margin
+%\raggedright
+
+\begin{document}
+CONTRATO DE ARRENDAMIENTO DE VIVIENDA
+
+\input{fecha}
+    REUNIDOS
+
+     
+
+    De una parte, y como ARRENDADOR, \input{_arrendador_nombre} , mayor de edad, de estado civil \input{_arrendador_estado_civil}, domiciliado/a en \input{_arrendador_domicilio} y con NIF nº \input{_arrendador_NIF}. A efectos de comunicaciones, como complemento al domicilio indicado, señala como correo electrónico \input{_arrendador_correo_electronico} y el siguiente número de teléfono: \input{_arrendador_telefono}
+
+      
+
+      De otra parte, y como ARRENDATARIO, D/Dña. ………………………, mayor de edad, de estado civil ………., domiciliado en …………….…, y con NIF nº …………... A efectos de comunicaciones, además de la vivienda que es objeto de este contrato, señala como correo electrónico ……..@........, y el siguiente número de teléfono:………….. 
+
+      (Añadir, si es el caso, nota 1 del anexo) A los efectos legales oportunos, el arrendatario hace constar que es menor de 30 años de edad, al haber nacido el ……….
+
+                 
+
+\end{document}

@@ -1,18 +1,22 @@
-<h1>Contracts#new</h1>
-<p>Find me in app/views/contracts/new.html.erb</p>
 <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <%= form_for(:contract, url: contrato_path) do |f| %>
-        <%= f.label :name , "Nombre" %>
-        <%= f.text_field :name, class: 'form-control' %>
-        <%= f.label :email %>
-        <%= f.email_field :email, class: 'form-control' %>
-        <%= f.label :password %>
-        <%= f.password_field :password, class: 'form-control' %>
-        <%= f.radio_button(:age, "child") %>
-        <%= f.label(:age_child, "I am younger than 21", class: 'radio-inline' ) %>
-        <%= f.radio_button(:age, "adult") %>
-        <%= f.label(:age_adult, "I'm over 21", class: 'radio-inline' ) %>
+        <%= f.label :nombre , "Nombre arrendador" %>
+        <%= f.text_field :nombre, class: 'form-control' %>
+        <%= f.label :domicilio , "Domicilio" %>
+        <%= f.text_field :domicilio, class: 'form-control' %>
+        <%= f.label :telefono , "Telefono" %>
+        <%= f.text_field :telefono, class: 'form-control' %>
+        <%= f.label :NIF , "NIF" %>
+        <%= f.text_field :NIF, class: 'form-control' %>
+        <%= f.label :fecha , "Fecha de firma del contrato" %>
+        <%= f.text_field :fecha, class: 'form-control' %>
+        <%= f.label :correo_electronico %>
+        <%= f.email_field :correo_electronico, class: 'form-control' %>
+        <%= f.radio_button(:estado_civil, "casado") %>
+        <%= f.label(:estado_civil_casado, "El arrendador esta casado", class: 'radio-inline' ) %>
+        <%= f.radio_button(:estado_civil, "soltero") %>
+        <%= f.label(:estado_civil_soltero, "El arrendador esta soltero", class: 'radio-inline' ) %>
         <%= f.submit "Log in", class: "btn btn-primary" %>
     <% end %>
   </div>
